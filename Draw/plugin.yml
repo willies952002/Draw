@@ -1,0 +1,10 @@
+name: Draw
+main: tk.willies952002.java.bukkitPlugins.Draw.Draw
+version: 1.0dev
+
+commands:
+   draw:
+      description: This is a demo command.
+      usage: /<command> [player]
+      permission: <plugin name>.basic
+      permission-message: You don't have <permission>

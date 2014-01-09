@@ -1,0 +1,27 @@
+package tk.willies952002.java.bukkitPlugins.Draw;
+
+import java.util.Iterator;
+
+public enum ColorValues implements Iterable<Integer> {
+	WHITE(0)
+	;
+
+	int dmgValue = 0;
+	
+	ColorValues(int damage) {
+		this.dmgValue = damage;
+	}
+	
+	@Override
+	public Iterator<Integer> iterator() {	
+		return null;
+	}
+	
+	public ColorValues getByID(int id) {
+		switch( id ) {
+			case 0: return WHITE;
+			default: return WHITE;
+		}
+	}
+
+}

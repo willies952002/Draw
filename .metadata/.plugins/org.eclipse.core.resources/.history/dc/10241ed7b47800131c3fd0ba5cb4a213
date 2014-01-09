@@ -1,0 +1,5 @@
+package tk.willies952002.java.bukkitPlugins.Draw;
+
+public enum ColorValues implements Iterable<T> {
+
+}
