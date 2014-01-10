@@ -18,26 +18,47 @@ public class DrawExecutor implements CommandExecutor {
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 		if ( isCommand(cmd) ) {
-			if ( properArgs(args.length, sender) ) {
-				//TODO Send Players Back To Hub
-				//TODO Reload World
-				//TODO Restart Server
-			}
-			else {
-				sender.sendMessage("The Given Arguments Do Not Match The Number Of Required Arguments");
+			if ( args[0].equalsIgnoreCase("reload") ) {
+				if ( properArgs(args.length, sender, 0, 2) ) {
+					/**
+					TODO Send Players Back To Lobby {
+						TODO List Players Playing On The Server
+						TODO Enumerate Through The Players And 'Kick' Them To The Lobby
+					}					
+					TODO Call External Reload Program Packaged In Jar {
+						TODO Reload World {
+							TODO List Files Contained in The 3 World Folders
+							TODO Enumerate Through Each File And Delete Them
+							TODO Open DrawWorld.zip and Prepare For Restart
+						}
+						TODO Restart Server {
+							TODO Call A Command To Start A New Server Instance
+						}
+					}
+					*/
+				}
+				else if ( (isPlayer(sender) || isConsole(sender)) && !properArgs(args.length, sender, 0, 2) ){
+					sender.sendMessage("The Given Arguments Do Not Match The Number Of Required Arguments");
+				}
+				else {
+					sender.sendMessage("You Cannot Execute This Command Without Being A Player Or Accessing The Console");
+				}
 			}
 		}
 		return false;
 	}
 
-	private boolean properArgs(int lengthArgs, CommandSender sender) {
-		int minArgs = 0;
-		int maxArgs = 2;
+	private boolean properArgs(int lengthArgs, CommandSender sender, int min, int max) {
+		int minArgs = min;
+		int maxArgs = max;
 		if ( isPlayer(sender) ) {
 			minArgs = 1;
 		}
 		else if ( isConsole(sender) ){
 			minArgs = 2;
+		}
+		else {
+			return false;
 		}
 		return (minArgs < lengthArgs) && (lengthArgs < maxArgs);
 	}
