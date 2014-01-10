@@ -1,0 +1,17 @@
+package tk.willies952002.java.GitUpload;
+
+import java.awt.EventQueue;
+
+public class Test implements Runnable {
+
+	public void run() {
+		System.out.println("getClass().getProtectionDomain().getCodeSource().getLocation().getPath(): " + getClass().getProtectionDomain().getCodeSource().getLocation().getPath());
+		System.out.println("System.getProperty(\"user.dir\"): " + System.getProperty("user.dir"));
+		System.out.println("new java.io.File(\"\").getAbsolutePath(): " + new java.io.File("").getAbsolutePath());
+	}
+	
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Test());
+	}
+
+}

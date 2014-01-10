@@ -1,0 +1,90 @@
+package tk.willies952002.java.GitUpload;
+
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import java.awt.BorderLayout;
+import com.jgoodies.forms.layout.FormLayout;
+import com.jgoodies.forms.layout.ColumnSpec;
+import com.jgoodies.forms.layout.RowSpec;
+import com.jgoodies.forms.factories.FormFactory;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+import java.awt.Font;
+
+public class GitUpload {
+
+	private JFrame frame;
+	private JTextField textField;
+	private JTextField textField_1;
+	private JTextField textField_2;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					GitUpload window = new GitUpload();
+					window.frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the application.
+	 */
+	public GitUpload() {
+		initialize();
+	}
+
+	/**
+	 * Initialize the contents of the frame.
+	 */
+	private void initialize() {
+		frame = new JFrame();
+		frame.setBounds(100, 100, 450, 300);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.getContentPane().setLayout(new FormLayout(new ColumnSpec[] {
+				FormFactory.RELATED_GAP_COLSPEC,
+				ColumnSpec.decode("110px"),
+				FormFactory.RELATED_GAP_COLSPEC,
+				ColumnSpec.decode("default:grow"),},
+			new RowSpec[] {
+				FormFactory.RELATED_GAP_ROWSPEC,
+				RowSpec.decode("15px"),
+				FormFactory.RELATED_GAP_ROWSPEC,
+				RowSpec.decode("15px"),
+				FormFactory.RELATED_GAP_ROWSPEC,
+				RowSpec.decode("15px"),
+				FormFactory.RELATED_GAP_ROWSPEC,
+				RowSpec.decode("15px"),}));
+		
+		JLabel lblGitRepository = new JLabel("Git Repository: ");
+		frame.getContentPane().add(lblGitRepository, "2, 2, right, top");
+		
+		textField = new JTextField();
+		frame.getContentPane().add(textField, "4, 2, left, default");
+		textField.setColumns(28);
+		
+		JLabel lblGitUsername = new JLabel("Git Username: ");
+		frame.getContentPane().add(lblGitUsername, "2, 4, right, top");
+		
+		textField_1 = new JTextField();
+		frame.getContentPane().add(textField_1, "4, 4, left, default");
+		textField_1.setColumns(28);
+		
+		JLabel lblGitPassword = new JLabel("Git Password:");
+		frame.getContentPane().add(lblGitPassword, "2, 6, right, top");
+		
+		textField_2 = new JTextField();
+		textField_2.setFont(new Font("Dialog", Font.PLAIN, 10));
+		frame.getContentPane().add(textField_2, "4, 6, left, default");
+		textField_2.setColumns(28);
+	}
+
+}

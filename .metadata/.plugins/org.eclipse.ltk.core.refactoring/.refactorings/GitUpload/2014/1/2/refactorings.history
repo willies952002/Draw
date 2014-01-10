@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;tk.willies952002.java.GitUpload.GitUpload&apos; to &apos;GitUploadOld&apos;&#x0A;- Original project: &apos;GitUpload&apos;&#x0A;- Original element: &apos;tk.willies952002.java.GitUpload.GitUpload&apos;&#x0A;- Renamed element: &apos;tk.willies952002.java.GitUpload.GitUploadOld&apos;&#x0A;- Update references to refactored element&#x0A;- Rename similarly named elements&#x0A;- Update fully qualified names in &apos;*&apos; files&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;GitUpload&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;tk.willies952002.java.GitUpload{GitUpload.java[GitUpload" matchStrategy="1" name="GitUploadOld" patterns="*" qualified="true" references="true" similarDeclarations="true" stamp="1389305745486" textual="true" version="1.0"/>
+</session>
