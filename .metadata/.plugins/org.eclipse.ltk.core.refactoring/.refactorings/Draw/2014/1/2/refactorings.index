@@ -1,1 +1,4 @@
 1389221074935	Encapsulate field 'dmgValue'
+1389424821464	Convert local variable 'subDirFiles' to field
+1389478144627	Convert local variable 'zipInput' to field
+1389478250512	Convert local variable 'entry' to field

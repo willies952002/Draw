@@ -1,0 +1,15 @@
+package tk.willies952002.java.bukkitPlugins.Draw;
+
+public class WorldReloader implements Runnable {
+
+	public WorldReloader() {
+	}
+
+	@Override
+	public void run() {
+	}
+
+	public static void main(String[] args) {
+	}
+
+}

@@ -1,0 +1,39 @@
+package tk.willies952002.java.bukkitPlugins.Draw;
+
+import java.io.File;
+import java.io.IOException;
+
+import org.apache.commons.lang.SystemUtils;
+
+public class WorldUnpacker implements Runnable {
+
+	private File worldArchive;
+	
+	public WorldUnpacker(String path) {
+		this(new File(path));
+	}
+	
+	public WorldUnpacker(File zip) {
+		this.worldArchive = zip;
+	}
+
+	@Override
+	public void run() {
+		if ( SystemUtils.IS_OS_LINUX ) {
+			try {
+				Runtime.getRuntime().exec("unzip " + worldArchive.getAbsolutePath());
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+		else {
+			//TODO Extract the world archive
+		}
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

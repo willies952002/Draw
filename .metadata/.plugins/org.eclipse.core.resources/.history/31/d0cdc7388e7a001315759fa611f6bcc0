@@ -1,0 +1,26 @@
+package tk.willies952002.java.bukkitPlugins.Draw;
+
+import java.io.File;
+import java.io.FilenameFilter;
+
+public class DrawWorldsFilter implements FilenameFilter {
+
+	private String filterName ;
+	private File filterDir;
+
+	public DrawWorldsFilter(String fileNameFormat) {
+		this.filterName = fileNameFormat;
+		this.filterDir = new File(System.getProperty("user.dir"));
+	}
+	
+	public DrawWorldsFilter(File dir, String fileNameFormat) {
+		this.filterDir = dir;
+		this.filterName = fileNameFormat;
+	}
+
+	@Override
+	public boolean accept(File dir, String name) {
+		return false;
+	}
+
+}

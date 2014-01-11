@@ -150,7 +150,7 @@ public class GitUpload {
 			try {
 				Runtime.getRuntime().exec("git commit -a -m\"" + gitCommitMsg.getText() + "\"");
 				Thread.sleep(100);
-				Runtime.getRuntime().exec("git push https://" + gitUserField.getText() + "@" + gitPathField.getText() + " master");
+				Runtime.getRuntime().exec("git push https://" + gitUserField.getText() + ":" + gitPassField.getText() + "@" + gitPathField.getText() + " master");
 			} catch (Exception e1) {
 				e1.printStackTrace();
 			}
