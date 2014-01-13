@@ -1,0 +1,19 @@
+package tk.willies952002.java.bukkitPlugins.Draw;
+
+import java.util.logging.Logger;
+
+import org.bukkit.plugin.java.JavaPlugin;
+
+/**
+ * @author William Surgeon ( willies952002 )
+ * @version 1.0dev
+ */
+public final class Draw extends JavaPlugin {
+	
+	Logger log = this.getLogger();
+	
+	public void onEnable() {
+		this.saveDefaultConfig();
+	}
+	
+}

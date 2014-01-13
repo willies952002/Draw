@@ -1,0 +1,35 @@
+package tk.willies952002.java.bukkitPlugins.Draw;
+
+import java.io.File;
+import java.io.IOException;
+
+import org.bukkit.Server;
+
+public class WorldReloader {
+
+	private static Server miniGameServer;
+
+	public WorldReloader(Server server) {
+		WorldReloader.miniGameServer = server;
+	}
+
+	public static void main(String[] args) throws IOException {
+		File srvrDir = new File(miniGameServer.getUpdateFolderFile().getAbsolutePath());
+		File[] worldFiles = srvrDir.listFiles(new DrawWorldsFilter(srvrDir, "DrawMinigame"));
+		String[] worldFilePaths = new String[1000];
+		int fileID = 0;
+		File[] subDirFiles;
+		for ( File file : worldFiles ) {
+			if ( file.isDirectory() ) {
+				subDirFiles = file.listFiles();
+			}
+			else if ( file.isFile() ) {
+				worldFilePaths[fileID] = file.getCanonicalPath();
+				fileID++;
+			}
+		}
+		
+		Runtime.getRuntime().exec("");
+	}
+
+}

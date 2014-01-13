@@ -1,0 +1,7 @@
+package tk.willies952002.java.bukkitPlugins.Draw;
+
+import org.bukkit.event.Listener;
+
+public class LoginListener implements Listener {
+
+}

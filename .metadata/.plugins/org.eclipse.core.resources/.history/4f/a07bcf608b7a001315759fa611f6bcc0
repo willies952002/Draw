@@ -1,0 +1,19 @@
+package tk.willies952002.java.bukkitPlugins.Draw;
+
+import java.io.File;
+
+public class WorldReloader {
+
+	private String[] worldsToReload;
+
+	public WorldReloader(String[] worlds) {
+		this.worldsToReload = worlds;
+	}
+
+	public static void main(String[] args) {
+		
+		File[] worldFiles = new File();
+		Runtime.getRuntime().exec()
+	}
+
+}

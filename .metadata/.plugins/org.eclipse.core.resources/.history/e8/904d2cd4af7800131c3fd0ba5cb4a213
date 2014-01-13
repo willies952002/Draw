@@ -1,0 +1,14 @@
+/**
+ * 
+ */
+package tk.willies952002.java.bukkitPlugins.Draw;
+
+import org.bukkit.plugin.java.JavaPlugin;
+
+/**
+ * @author william
+ *
+ */
+public class Draw extends JavaPlugin {
+
+}

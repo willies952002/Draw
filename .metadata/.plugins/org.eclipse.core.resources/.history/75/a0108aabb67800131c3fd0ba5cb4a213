@@ -1,0 +1,51 @@
+package tk.willies952002.java.bukkitPlugins.Draw;
+
+import java.util.logging.Logger;
+
+import org.bukkit.Material;
+import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.Listener;
+import org.bukkit.event.player.PlayerLoginEvent;
+import org.bukkit.event.player.PlayerLoginEvent.Result;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.PlayerInventory;
+import org.bukkit.plugin.java.JavaPlugin;
+
+/**
+ * @author William Surgeon ( willies952002 )
+ * @version 1.0dev
+ */
+public final class Draw extends JavaPlugin implements Listener {
+	
+	Logger log = this.getLogger();
+	
+	@Override
+	public void onEnable() {
+		//TODO Insert logic to be performed when the plugin is enabled
+		this.getServer().getPluginManager().registerEvents(this, this);
+	}
+	
+	@Override
+	public void onDisable() {
+		//TODO Insert logic to be performed when the plugin is disabled
+	}
+	
+	@EventHandler
+	public void onLogin(PlayerLoginEvent login) {
+		Player player = null;
+		if ( login.getPlayer() instanceof Player ) {
+			login.allow();
+			player = login.getPlayer();
+			PlayerInventory inv = player.getInventory();
+			inv.clear();
+			ItemStack items = new ItemStack()[] { org.bukkit.Material.AIR }; 
+			for ( ItemStack item : items )
+			inv.setItem(slot, item);
+		}
+		else {
+			login.disallow(Result.KICK_OTHER, login.getPlayer() + " tried to connect but was not a Player");
+		}
+	}
+	
+}

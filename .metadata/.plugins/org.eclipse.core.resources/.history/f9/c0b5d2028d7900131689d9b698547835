@@ -1,0 +1,11 @@
+package tk.willies952002.java.GitUpload;
+
+public class Test {
+
+	public Test() {
+		System.out.println("getClass().getProtectionDomain().getCodeSource().getLocation().getPath(): " + getClass().getProtectionDomain().getCodeSource().getLocation().getPath());
+		System.out.println("System.getProperty(\"user.dir\"): " + System.getProperty("user.dir"));
+		System.out.println("new java.io.File("").getAbsolutePath(): " + new java.io.File("").getAbsolutePath());
+	}
+
+}
