@@ -1,0 +1,11 @@
+package tk.willies952002.java.bukkitPlugins.Draw;
+
+import org.bukkit.event.Listener;
+
+public class TeamPickListener implements Listener {
+
+	public TeamPickListener() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

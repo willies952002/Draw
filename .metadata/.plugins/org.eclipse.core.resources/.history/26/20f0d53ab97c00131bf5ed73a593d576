@@ -1,0 +1,30 @@
+package tk.willies952002.java.bukkitPlugins.Draw;
+
+import org.bukkit.entity.Player;
+import org.bukkit.event.EventHandler;
+import org.bukkit.event.EventPriority;
+import org.bukkit.event.Listener;
+import org.bukkit.event.block.Action;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.plugin.Plugin;
+import org.bukkit.scoreboard.Scoreboard;
+
+public class TeamPickListener implements Listener {
+
+	private Plugin plugin;
+
+	public TeamPickListener(Plugin p) {
+		this.plugin = p;
+	}
+	
+	@EventHandler(priority = EventPriority.HIGHEST)
+	public void onTeamPick(org.bukkit.event.player.PlayerInteractEvent e) {
+		Action a = e.getAction();
+		ItemStack i = e.getItem();
+		Player p = e.getPlayer();
+		boolean b = e.isBlockInHand();
+		e.setCancelled(true);
+		p.
+	}
+
+}

@@ -1,0 +1,14 @@
+package tk.willies952002.java.bukkitPlugins.Draw;
+
+import org.bukkit.event.Listener;
+import org.bukkit.plugin.Plugin;
+
+public class TeamPickListener implements Listener {
+
+	private Plugin plugin;
+
+	public TeamPickListener(Plugin p) {
+		this.plugin = p;
+	}
+
+}

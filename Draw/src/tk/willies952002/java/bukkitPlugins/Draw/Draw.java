@@ -20,20 +20,12 @@ public final class Draw extends JavaPlugin implements Listener {
 	@Override
 	public void onEnable() {
 		//TODO Insert logic to be performed when the plugin is enabled
-		String[] teamNames = new String[] {"Red", "Blue", "Orange", "Green"};
-		String[] teamChatColors = new String[teamNames.length];
-		for ( int teamID = 0; teamID < teamNames.length; teamID++ ) {
-			teamChatColors[teamID] = teamNames[teamID].toLowerCase();
-		}
-		config.addDefault("teams.number", teamNames.length);
-		config.addDefault("teams.nameList", teamNames);
-		config.addDefault("teams.colorList", new int[] { ColorValues.RED.getDmgValue(), ColorValues.BLUE.getDmgValue(), ColorValues.ORANGE.getDmgValue(), ColorValues.GREEN.getDmgValue() });
-		config.addDefault("teams.chatColors", teamChatColors);
-		if ( this.getDataFolder().mkdirs() ) {
-			this.saveDefaultConfig();
-		}
+		DrawScoreboard scoreboard = new DrawScoreboard(this);
+		scoreboard.init();
+		this.getServer().getPluginManager().registerEvents(new LoginListener(this), this);
+		this.getServer().getPluginManager().registerEvents(new TeamPickListener(this, scoreboard), this);
 		this.getServer().getPluginManager().registerEvents(loginListener, this);
-		this.getCommand("draw").setExecutor(new DrawExecutor(this));
+		//this.getCommand("draw").setExecutor(new DrawExecutor(this));
 	}
 	
 	@Override

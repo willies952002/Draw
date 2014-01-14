@@ -42,7 +42,7 @@ public class LoginListener implements Listener {
 				log.warning("This Game Requires AT LEAST Two (2) Teams To Play It");
 			}
 			else if ( numTeams > 5 ) {
-				log.warning("This Game Can Only Handel A Maximum of Four (4) Competing Teams And A Spectating Team");
+				log.warning("This Game Can Only Handle A Maximum of Four (4) Competing Teams And A Spectating Team");
 			}
 			else {
 				for ( String team : config.getStringList("teams.nameList") ) {

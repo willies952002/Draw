@@ -7,7 +7,6 @@
 <fullyQualifiedTypeName name="org.bukkit.event.EventHandler"/>
 <fullyQualifiedTypeName name="org.bukkit.event.Event.Result"/>
 <fullyQualifiedTypeName name="org.bukkit.event.player.PlayerLoginEvent.Result"/>
-<fullyQualifiedTypeName name="org.bukkit.Material"/>
 <fullyQualifiedTypeName name="org.bukkit.Color"/>
 <fullyQualifiedTypeName name="org.bukkit.block.Block"/>
 <fullyQualifiedTypeName name="java.lang.Short"/>
@@ -16,7 +15,6 @@
 <fullyQualifiedTypeName name="org.bukkit.event.HandlerList"/>
 <fullyQualifiedTypeName name="org.bukkit.configuration.Configuration"/>
 <fullyQualifiedTypeName name="java.awt.List"/>
-<fullyQualifiedTypeName name="tk.willies952002.java.bukkitPlugins.Draw.ColorValues"/>
 <fullyQualifiedTypeName name="org.bukkit.command.ConsoleCommandSender"/>
 <fullyQualifiedTypeName name="org.bukkit.Server"/>
 <fullyQualifiedTypeName name="java.util.List"/>
@@ -28,7 +26,21 @@
 <fullyQualifiedTypeName name="org.apache.commons.lang.SystemUtils"/>
 <fullyQualifiedTypeName name="java.util.zip.ZipEntry"/>
 <fullyQualifiedTypeName name="java.util.Enumeration"/>
-<fullyQualifiedTypeName name="org.bukkit.Bukkit"/>
 <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
 <fullyQualifiedTypeName name="org.apache.commons.lang.RandomStringUtils"/>
+<fullyQualifiedTypeName name="org.bukkit.event.block.BlockPlaceEvent"/>
+<fullyQualifiedTypeName name="org.bukkit.event.inventory.InventoryEvent"/>
+<fullyQualifiedTypeName name="org.bukkit.event.inventory.ClickType"/>
+<fullyQualifiedTypeName name="org.bukkit.event.player.PlayerInventoryEvent"/>
+<fullyQualifiedTypeName name="org.bukkit.event.block.Action"/>
+<fullyQualifiedTypeName name="org.bukkit.event.EventPriority"/>
+<fullyQualifiedTypeName name="org.bukkit.scoreboard.Scoreboard"/>
+<fullyQualifiedTypeName name="org.bukkit.command.defaults.ScoreboardCommand"/>
+<fullyQualifiedTypeName name="org.bukkit.Bukkit"/>
+<fullyQualifiedTypeName name="org.bukkit.plugin.Plugin"/>
+<fullyQualifiedTypeName name="tk.willies952002.java.bukkitPlugins.Draw.ColorValues"/>
+<fullyQualifiedTypeName name="org.bukkit.ChatColor"/>
+<fullyQualifiedTypeName name="org.bukkit.scoreboard.ScoreboardManager"/>
+<fullyQualifiedTypeName name="org.bukkit.Material"/>
+<fullyQualifiedTypeName name="org.bukkit.event.player.PlayerInteractEvent"/>
 </qualifiedTypeNameHistroy>

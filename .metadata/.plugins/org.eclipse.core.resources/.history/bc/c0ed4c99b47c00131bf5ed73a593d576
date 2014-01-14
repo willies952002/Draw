@@ -1,0 +1,115 @@
+package tk.willies952002.java.bukkitPlugins.Draw;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+
+import org.bukkit.ChatColor;
+import org.bukkit.OfflinePlayer;
+import org.bukkit.plugin.Plugin;
+import org.bukkit.scoreboard.DisplaySlot;
+import org.bukkit.scoreboard.Objective;
+import org.bukkit.scoreboard.Score;
+import org.bukkit.scoreboard.Scoreboard;
+import org.bukkit.scoreboard.ScoreboardManager;
+import org.bukkit.scoreboard.Team;
+
+public class DrawScoreboard implements Scoreboard {
+
+	private ScoreboardManager sbm;
+	private Scoreboard board;
+	private Plugin plugin;
+
+	public DrawScoreboard(Plugin plugin) {
+		this.plugin = plugin;
+		sbm = plugin.getServer().getScoreboardManager();
+		board = sbm.getNewScoreboard();
+	}
+	
+	public void init() {
+		Team[] teams = new Team[plugin.getConfig().getInt("teams.number")];
+		for ( int teamID = 0; teamID < plugin.getConfig().getInt("teams.number"); teamID++ ) {
+			List<String> names = plugin.getConfig().getStringList("teams.nameList");
+			List<Integer> colors = plugin.getConfig().getIntegerList("teams.colorList");
+			teams[teamID] = this.registerNewTeam(names.get(teamID));
+			teams[teamID].setAllowFriendlyFire(false);
+			teams[teamID].setCanSeeFriendlyInvisibles(true);
+			teams[teamID].setDisplayName(names.get(teamID));
+			teams[teamID].setPrefix("§" + colors.get(teamID));
+			teams[teamID].setSuffix("§r;");
+		}
+	}
+
+	@Override
+	public void clearSlot(DisplaySlot slot) throws IllegalArgumentException {
+		board.clearSlot(slot);
+	}
+
+	@Override
+	public Objective getObjective(String name) throws IllegalArgumentException {
+		return board.getObjective(name);
+	}
+
+	@Override
+	public Objective getObjective(DisplaySlot slot)
+			throws IllegalArgumentException {
+		return board.getObjective(slot);
+	}
+
+	@Override
+	public Set<Objective> getObjectives() {
+		return board.getObjectives();
+	}
+
+	@Override
+	public Set<Objective> getObjectivesByCriteria(String criteria)
+			throws IllegalArgumentException {
+		return board.getObjectivesByCriteria(criteria);
+	}
+
+	@Override
+	public Team getPlayerTeam(OfflinePlayer player)
+			throws IllegalArgumentException {
+		return board.getPlayerTeam(player);
+	}
+
+	@Override
+	public Set<OfflinePlayer> getPlayers() {
+		return board.getPlayers();
+	}
+
+	@Override
+	public Set<Score> getScores(OfflinePlayer player)
+			throws IllegalArgumentException {
+		return board.getScores(player);
+	}
+
+	@Override
+	public Team getTeam(String teamName) throws IllegalArgumentException {
+		return board.getTeam(teamName);
+	}
+
+	@Override
+	public Set<Team> getTeams() {
+		return board.getTeams();
+	}
+
+	@Override
+	public Objective registerNewObjective(String name, String criteria)
+			throws IllegalArgumentException {
+		return board.registerNewObjective(name, criteria);
+	}
+
+	@Override
+	public Team registerNewTeam(String name) throws IllegalArgumentException {
+		return board.registerNewTeam(name);
+	}
+
+	@Override
+	public void resetScores(OfflinePlayer player)
+			throws IllegalArgumentException {
+		board.resetScores(player);
+	}
+	
+}
+		

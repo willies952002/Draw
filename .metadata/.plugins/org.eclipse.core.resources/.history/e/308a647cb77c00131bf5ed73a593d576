@@ -1,0 +1,49 @@
+package tk.willies952002.java.bukkitPlugins.Draw;
+
+public enum ScoreboardColors {
+	
+	BLACK(0),
+	BLUE(1),
+	GREEN(2),
+	LIGHT_BLUE(3),
+	RED(4),
+	PURPLE(5),
+	ORANGE(6),
+	SILVER(7),
+	GRAY(8),
+	CYAN(9),
+	LIME('a'),
+	PINK('d'),
+	YELLOW('e'),
+	WHITE('f');
+
+	private String prefix;
+
+	ScoreboardColors(String val) {
+		this.prefix = "§" + val;
+	}
+	
+	ScoreboardColors(int val) {
+		this.prefix = "§" + val;
+	}
+
+	public static String getByName(String color) {
+		if ( color.equalsIgnoreCase("black") ) {
+			return BLACK.prefix;
+		}
+		else if ( color.equalsIgnoreCase("blue") ) {
+			return BLUE.prefix;
+		}
+		else if ( color.equalsIgnoreCase("green") ) {
+			return BLUE.prefix;
+		}
+		else if ( color.equalsIgnoreCase("light_blue") ) {
+			return LIGHT_BLUE.prefix;
+		}
+		else if ( color.equalsIgnoreCase("red") ) {
+			return RED.prefix;
+		}
+		return null;
+	}
+	
+}
